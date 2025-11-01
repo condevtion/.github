@@ -2,31 +2,32 @@
 
 ## About
 
-Within these pages, the arcane code and whispered secrets of the I2C Sensors board are now unveiled. We invite the curious to delve into its digital heart.
+Condeviton is the home for the I2C Sensors Board, offering open-source schematics and code for a compact sensor platform.
 
-## The Triple Eye of Observation: I2C Sensors Board
+## I2C Sensors Board
 
-A nexus of three little digital sensors - each a tiny sentinel gathering data from the ether. They measure the very breath of the air - pressure, the mists and fever of the surroundings - relative humidity and temperature, and the hidden spectrum and the Glow - light and color.
+The board features a set of three miniature digital sensors. They measure temperature, pressure, relative humidity, ambient light and color (RGB).
 
 <img width="320" height="290" alt="I2CSensors Board" src="https://github.com/user-attachments/assets/269caf3b-be8b-4e8b-b98a-6cf10cff9b34" />
 
-All three miniature eyes draw their strength from a common 3.3V power stream (`VDD`, `GND`), and commune via the sacred I2C bus (`SCL`, `SCA`). This bus is fortified with pull-up resistors, ensuring the messages are not lost to the void. For those requiring immediate, urgent notifications, the interrupt lines for the pressure and ambient light sensors (`IP`, `IL`) stand exposed and ready to signal.
+All the sensors powered from a common 3.3V source (`VDD`, `GND`), and communicate over I2C bus (`SCL`, `SCA`) which is already equipped with pull-up resistors. Additionally, pressure and light sensor's interrupt lines exposed on dedicated pins (`IP`, `IL`).
 
 Assembled samples are available at ebay - [Temperature, Pressure, Humidity, Light, and Color I2C Sensors Board](https://ebay.us/m/AJYYwf).
 
-## The Breath of the Air: Pressure
+## Pressure
 
-The SPL07-003 a miniaturized digital barometric air pressure sensor from [Goermicro](https://en.goermicro.com/) (U1) is the component responsible for sensing the great weight of the atmosphere. Its I2C calling address can be mystically altered by the solder jumper (J3). For deeper study into its workings, consult its ancient scroll [SPL07-003.pdf](https://media.digikey.com/pdf/Data%20Sheets/Goertek%20Microelectronics%20PDFs/SPL07-003.pdf) in DigiKey's scriptorium.
+SPL07-003 is responsible for air pressure measurements. It is a miniaturized digital barometric sensor from [Goermicro](https://en.goermicro.com/) (U1). Its I2C address can be altered by the solder jumper (J3). For mor details consult its datasheet [SPL07-003.pdf](https://media.digikey.com/pdf/Data%20Sheets/Goertek%20Microelectronics%20PDFs/SPL07-003.pdf) in DigiKey's media storage.
 
-## The Mists and the Fever: Humidity and Temperature
+## Humidity and Temperature
 
-For divining the environment's relative humidity and its precise temperature, we rely on the ENS210 sensor from [ScioSense](https://www.sciosense.com/). This clever chip is a dual-purpose artifact, featuring both a humidity detector and a surprisingly accurate thermometer. The full spellbook is detailed in the [ENS210-Datasheet.pdf](https://www.sciosense.com/wp-content/uploads/2025/09/ENS210-Datasheet.pdf).
+For relative humidity and temperature measurements the board relies on the ENS210 sensor from [ScioSense](https://www.sciosense.com/). The chip contains high accuracy temperature sensor (0.15°C). More information can be found in the [ENS210-Datasheet.pdf](https://www.sciosense.com/wp-content/uploads/2025/09/ENS210-Datasheet.pdf).
 
-## The Hidden Spectrum and the Glow: Ambient Light and Color
+## Ambient Light and Color
 
-The APDS-9999 from [Broadcom](https://www.broadcom.com/) is the eye that sees beyond. It measures ambient light, the invisible infrared, and the glorious RGB hues. It is the keeper of the colors and the light's intensity. Unlock its secrets on its own illuminated page - [APDS-9999](https://www.broadcom.com/products/optical-sensors/integrated-ambient-light-and-proximity-sensors/apds-9999).
+The APDS-9999 from [Broadcom](https://www.broadcom.com/) is an ambient light, infrared, and RGB sensor. It can be configured to measure overall illuminance or to use four individual channels for red, green, blue, and infrared light. See further description on its page - [APDS-9999](https://www.broadcom.com/products/optical-sensors/integrated-ambient-light-and-proximity-sensors/apds-9999).
 
-## The Vision of the Aether: Tools
-Should you seek to capture the raw whispers of the sensors, the [i2cs-test](https://github.com/condevtion/i2cs-test) utility is your initial scrying pool. Though meant for trials, it can fully extract all data from the I2C sensors. Once these secrets are bound, the powerful [i2cs-graph](https://github.com/condevtion/i2cs-graph) utility is summoned. This potent spell transforms the raw whispers into magnificent charts and spectral lines, allowing the initiated to gaze upon the flow of data.
+## Tools
+
+The board can be tested and simple measurements can be done with [i2cs-test](https://github.com/condevtion/i2cs-test) utility. Data gathered by it can be visualized by [i2cs-graph](https://github.com/condevtion/i2cs-graph). It produces charts for main measured values - temperature, pressure, relative humidity, illuminance, relative infrared readings, normalized RGB channels, and shows measured colors as RGB chart background.
 
 <img width="651" height="509" alt="I2CS-data" src="https://github.com/user-attachments/assets/038d8b69-3c94-4f1b-be64-43c09d959b49" />

@@ -10,7 +10,9 @@ A nexus of three little digital sensors - each a tiny sentinel gathering data fr
 
 <img width="320" height="290" alt="I2CSensors Board" src="https://github.com/user-attachments/assets/269caf3b-be8b-4e8b-b98a-6cf10cff9b34" />
 
-All three miniature eyes draw their strength from a common 3.3V power stream (`VDD`, `GND`), and commune via the sacred I2C bus (`SCL`, `SCA`). This bus is fortified with pull-up resistors, ensuring the messages are not lost to the void. For those requiring immediate, urgent notifications, the interrupt lines for the pressure and ambient light sensors (`IP`, `IL`) stand exposed and ready to signal. 
+All three miniature eyes draw their strength from a common 3.3V power stream (`VDD`, `GND`), and commune via the sacred I2C bus (`SCL`, `SCA`). This bus is fortified with pull-up resistors, ensuring the messages are not lost to the void. For those requiring immediate, urgent notifications, the interrupt lines for the pressure and ambient light sensors (`IP`, `IL`) stand exposed and ready to signal.
+
+Assembled samples are available at ebay - [Temperature, Pressure, Humidity, Light, and Color I2C Sensors Board](https://ebay.us/m/AJYYwf).
 
 ## The Breath of the Air: Pressure
 

@@ -12,7 +12,7 @@ The board features a set of three miniature digital sensors. They measure temper
 
 All the sensors powered from a common 3.3V source (`VDD`, `GND`), and communicate over I2C bus (`SCL`, `SCA`) which is already equipped with pull-up resistors. Additionally, pressure and light sensor's interrupt lines exposed on dedicated pins (`IP`, `IL`).
 
-Assembled samples are available at ebay - [Temperature, Pressure, Humidity, Light, and Color I2C Sensors Board](https://ebay.us/m/AJYYwf).
+Assembled samples are available at ebay - [Temperature, Pressure, Humidity, Light, and Color I2C Sensors Board](https://ebay.us/m/sxGKJv).
 
 ## Pressure
 
